@@ -10,6 +10,6 @@ jobs:
     steps:
       - run: echo "${BRANCH}"
       - run: echo "${PASSWORD}"                   # ログ出力はマスクされる
-      - run: echo "${PASSWORD:0:1} ${PASSWORD#?}”
-      - run: echo "${PASSWORD:0:5}”
-      - run: echo "${PASSWORD#?}”
+      - run: echo "${PASSWORD:0:1} ${PASSWORD#?}"
+      - run: echo "${PASSWORD:0:5}"
+      - run: echo "${PASSWORD#?}"
