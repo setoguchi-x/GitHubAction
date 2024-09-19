@@ -1,8 +1,12 @@
 name: Timeout
 on: push
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
 jobs:
   sleep:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
       - run: sleep 130
+
